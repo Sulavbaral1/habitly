@@ -1,0 +1,460 @@
+
+/* ==============================
+   1. CSS VARIABLES
+============================== */
+
+:root {
+    --navy: #0B1F3A;
+    --teal: #14B8A6;
+    --teal-dark: #0F988B;
+    --background: #F8FAFC;
+    --white: #FFFFFF;
+    --text: #334155;
+    --muted: #94A3B8;
+    --border: #E2E8F0;
+
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-4: 32px;
+    --spacing-5: 40px;
+    --spacing-6: 48px;
+
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(11, 31, 58, 0.06);
+}
+
+/* ==============================
+   2. GLOBAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--navy);
+    line-height: 1.6;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ==============================
+   3. HEADER
+============================== */
+
+.header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-2) var(--spacing-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.header-date {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ==============================
+   4. DASHBOARD
+============================== */
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-6) var(--spacing-3);
+}
+
+/* Welcome section */
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-5);
+}
+
+.eyebrow {
+    color: var(--teal-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: var(--spacing-1);
+}
+
+.welcome-section h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--navy);
+}
+
+.welcome-text {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: var(--spacing-1);
+}
+
+.welcome-emoji {
+    font-size: 52px;
+}
+
+/* ==============================
+   5. SUMMARY STAT CARDS
+============================== */
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-6);
+}
+
+.stat-card {
+    background: var(--white);
+    padding: var(--spacing-3);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(11, 31, 58, 0.1);
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-2);
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.teal-bg {
+    background: #CCFBF1;
+    color: #0F766E;
+}
+
+.orange-bg {
+    background: #FFEDD5;
+}
+
+.purple-bg {
+    background: #EDE9FE;
+}
+
+.stat-label {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    color: var(--navy);
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.stat-total,
+.stat-unit {
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.stat-card > p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: var(--spacing-1);
+}
+
+/* ==============================
+   6. HABITS SECTION
+============================== */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-3);
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.habit-count {
+    background: #CCFBF1;
+    color: #0F766E;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Habit grid */
+
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-3);
+}
+
+/* Individual habit card */
+
+.habit-card {
+    background: var(--white);
+    padding: var(--spacing-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(11, 31, 58, 0.1);
+}
+
+.habit-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-3);
+}
+
+.habit-emoji {
+    width: 52px;
+    height: 52px;
+    background: #F0FDFA;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.streak {
+    color: var(--teal-dark);
+    background: #CCFBF1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.habit-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--spacing-1);
+}
+
+.habit-card p {
+    color: var(--muted);
+    font-size: 13px;
+    min-height: 42px;
+    margin-bottom: var(--spacing-3);
+}
+
+/* Complete button */
+
+.complete-btn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: var(--teal);
+    color: var(--white);
+    padding: 11px var(--spacing-2);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.complete-btn:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+}
+
+.complete-btn:focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 3px;
+}
+
+/* ==============================
+   7. FOOTER
+============================== */
+
+.footer {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: var(--spacing-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer strong {
+    color: var(--navy);
+}
+
+.footer a {
+    color: var(--teal-dark);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   8. TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        padding: var(--spacing-5) var(--spacing-2);
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-2);
+    }
+
+    .stat-card:last-child {
+        grid-column: span 2;
+    }
+
+    .habits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-2);
+    }
+
+}
+
+/* ==============================
+   9. MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 480px) {
+
+    .header-content {
+        padding: var(--spacing-2);
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+    .header-date {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .dashboard {
+        padding: var(--spacing-4) var(--spacing-2);
+    }
+
+    .welcome-section {
+        margin-bottom: var(--spacing-4);
+    }
+
+    .welcome-section h1 {
+        font-size: 28px;
+    }
+
+    .welcome-text {
+        font-size: 13px;
+    }
+
+    .welcome-emoji {
+        font-size: 35px;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2);
+        margin-bottom: var(--spacing-5);
+    }
+
+    .stat-card:last-child {
+        grid-column: auto;
+    }
+
+    .stat-card {
+        padding: var(--spacing-2);
+    }
+
+    .stat-card h2 {
+        font-size: 27px;
+    }
+
+    .habits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+}
