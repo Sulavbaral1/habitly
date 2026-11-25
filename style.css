@@ -458,3 +458,349 @@ button {
     }
 
 }
+
+/* Empty habits state */
+
+
+/* ========================================
+   WEEK 2 - DAILY QUOTE
+======================================== */
+
+.quote-section {
+    max-width: 1200px;
+    margin: 32px auto 0;
+    padding: 20px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid #14B8A6;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 20px rgba(11, 31, 58, 0.05);
+}
+
+.quote-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.quote-content {
+    flex: 1;
+}
+
+.quote-label {
+    color: #0F988B;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+#quoteText {
+    color: #0B1F3A;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+#quoteAuthor {
+    display: block;
+    margin-top: 5px;
+    color: #94A3B8;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   WEEK 2 - HABIT FORM
+======================================== */
+
+.habit-form {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 20px rgba(11, 31, 58, 0.05);
+}
+
+.habit-form label {
+    display: block;
+    color: #0B1F3A;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.habit-input-row {
+    display: flex;
+    gap: 12px;
+}
+
+.habit-input-row input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.habit-input-row input:focus {
+    border-color: #14B8A6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.12);
+}
+
+.habit-input-row input::placeholder {
+    color: #94A3B8;
+}
+
+.add-btn {
+    background: #0B1F3A;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 20px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s, transform 0.2s;
+}
+
+.add-btn:hover {
+    background: #14B8A6;
+    transform: translateY(-1px);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   WEEK 2 - EMOJI PICKER
+======================================== */
+
+.emoji-picker {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin-top: 18px;
+}
+
+.emoji-picker span {
+    color: #64748B;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.emoji-option {
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #E2E8F0;
+    background: #F8FAFC;
+    border-radius: 8px;
+
+    font-size: 19px;
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.emoji-option:hover {
+    border-color: #14B8A6;
+    background: #CCFBF1;
+    transform: translateY(-2px);
+}
+
+.emoji-option.selected {
+    border-color: #14B8A6;
+    background: #CCFBF1;
+    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.12);
+}
+
+
+/* ========================================
+   WEEK 2 - FORM VALIDATION
+======================================== */
+
+.form-message {
+    font-size: 12px;
+    margin-top: 12px;
+    min-height: 18px;
+    line-height: 1.5;
+}
+
+.form-message.success {
+    color: #0F988B;
+}
+
+.form-message.error {
+    color: #DC2626;
+}
+
+
+/* ========================================
+   WEEK 2 - COMPLETED HABIT
+======================================== */
+
+.habit-card.completed {
+    border-color: #14B8A6;
+    background: #F0FDFA;
+}
+
+.complete-btn.done {
+    background: #0B1F3A;
+    color: #ffffff;
+}
+
+.complete-btn.done:hover {
+    background: #334155;
+}
+
+
+/* ========================================
+   WEEK 2 - DELETE BUTTON
+======================================== */
+
+.delete-btn {
+    border: none;
+    background: #FEF2F2;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: background 0.2s, transform 0.2s;
+}
+
+.delete-btn:hover {
+    background: #FECACA;
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   WEEK 2 - EMPTY STATE
+======================================== */
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    background: #ffffff;
+
+    padding: 40px 20px;
+    text-align: center;
+
+    border: 1px dashed #CBD5E1;
+    border-radius: 12px;
+}
+
+.empty-state h3 {
+    color: #0B1F3A;
+    margin: 10px 0 5px;
+    font-size: 17px;
+}
+
+.empty-state p {
+    color: #94A3B8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   WEEK 2 - ACCESSIBILITY
+======================================== */
+
+.add-btn:focus-visible,
+.emoji-option:focus-visible,
+.delete-btn:focus-visible,
+.complete-btn:focus-visible {
+    outline: 3px solid rgba(20, 184, 166, 0.4);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    .quote-section {
+        margin: 24px 20px 0;
+    }
+
+    .habit-form {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .quote-section {
+        margin: 20px 16px 0;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .quote-icon {
+        font-size: 26px;
+    }
+
+    .habit-form {
+        padding: 16px;
+    }
+
+    .habit-input-row {
+        flex-direction: column;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+
+    .emoji-picker {
+        gap: 7px;
+    }
+
+    .emoji-picker span {
+        width: 100%;
+        margin-bottom: 3px;
+    }
+
+    .empty-state {
+        padding: 30px 15px;
+    }
+
+}
